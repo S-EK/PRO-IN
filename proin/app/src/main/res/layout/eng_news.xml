@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/main_all"
+            android:layout_width="102dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/button_rd_eng"
+            android:fontFamily="sans-serif-black"
+            android:text="NEWS"
+            android:textColor="@color/concept"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/main_news"
+            android:layout_width="135dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="0"
+            android:background="@drawable/button_rd_eng"
+            android:backgroundTint="@color/english_c"
+            android:fontFamily="sans-serif-black"
+            android:text="NEWSPAPER"
+            android:textColor="@color/concept"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:paddingRight="10dp">
+
+            <com.jsseok.proin.ui.view.CustomView
+                android:id="@+id/korea"
+                app:image="@drawable/south_korea"
+                app:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|right" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:gravity="bottom|right"
+                android:text="/"
+                android:textSize="13sp" />
+
+            <com.jsseok.proin.ui.view.CustomView
+                android:id="@+id/english"
+                app:image="@drawable/united_states"
+                app:text="ENGLISH"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grid"
+        android:numColumns="2"
+        android:layout_weight="1"
+        android:verticalSpacing="17dp"
+        android:horizontalSpacing="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
